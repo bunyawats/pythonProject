@@ -1,12 +1,13 @@
 from langchain_community.document_loaders import PDFPlumberLoader
 from langchain_experimental.text_splitter import SemanticChunker
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 from langchain.prompts import PromptTemplate
 from langchain.chains.llm import LLMChain
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain.chains import RetrievalQA
+
 
 
 # Load the PDF
@@ -25,7 +26,7 @@ vector = FAISS.from_documents(documents, embedder)
 retriever = vector.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
 # Define llm
-llm = Ollama(model="llama3")
+llm = OllamaLLM(model="llama3")
 
 # Define the prompt
 prompt = """
@@ -66,5 +67,3 @@ qa = RetrievalQA(
 
 
 print(qa("How does plant respond to disease?")["result"])
-
-
