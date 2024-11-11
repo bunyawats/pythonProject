@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b9a0d0-cb48-4d7c-9908-ebbe6cdcb945" name="Changes" comment="Add LANGCHAIN_API_KEY loading">
+      <change afterPath="$PROJECT_DIR$/sandbox/หน้าที่คนประจำเรือ.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/.env" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/langchain_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/langchain_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/rag_langchain.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_langchain.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/rag_main_a.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_main_a.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,31 +47,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.langchain_test.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.openai_test.executor": "Run",
-    "Python.rag_main (1).executor": "Run",
-    "Python.rag_main.executor": "Run",
-    "Python.rag_main_a.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/bunyawatsingchai/PycharmProjects/pythonProject/sandbox",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.langchain_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.openai_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_main_a.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bunyawatsingchai/PycharmProjects/pythonProject/sandbox&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sandbox" />
@@ -85,15 +84,15 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.langchain_test">
+  <component name="RunManager" selected="Python.rag_main_a">
     <configuration name="langchain_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="LANGCHAIN_API_KEY" value="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" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="LANGCHAIN_API_KEY" value="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" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sandbox" />
@@ -210,8 +209,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="LANGCHAIN_API_KEY" value="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" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="LANGCHAIN_API_KEY" value="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" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sandbox" />
@@ -237,9 +236,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.langchain_test" />
         <item itemvalue="Python.rag_main_a" />
         <item itemvalue="Python.rag_main" />
+        <item itemvalue="Python.langchain_test" />
         <item itemvalue="Python.rag_main" />
         <item itemvalue="Python.openai_test" />
       </list>
@@ -267,6 +266,7 @@
       <workItem from="1730197890366" duration="4563000" />
       <workItem from="1730354991157" duration="3982000" />
       <workItem from="1730857476579" duration="24518000" />
+      <workItem from="1731295427902" duration="3875000" />
     </task>
     <task id="LOCAL-00001" summary="add post endpoint&#10;- read header&#10;- read path parameter&#10;- read json body">
       <option name="closed" value="true" />
@@ -316,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731292694572</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add LANGCHAIN_API_KEY loading">
+      <option name="closed" value="true" />
+      <created>1731296577563</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731296577563</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,11 +349,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add LANGCHAIN_API_KEY loading" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pythonProject$rag_main.coverage" NAME="rag_main Coverage Results" MODIFIED="1731291661366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject$rag_main.coverage" NAME="rag_main Coverage Results" MODIFIED="1731297461334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main__1_.coverage" NAME="rag_main (1) Coverage Results" MODIFIED="1731291899695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1730251497849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject$rag_main_a.coverage" NAME="rag_main_a Coverage Results" MODIFIED="1731292070529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$rag_main_a.coverage" NAME="rag_main_a Coverage Results" MODIFIED="1731298928224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$openai_test.coverage" NAME="openai_test Coverage Results" MODIFIED="1731060487269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
-    <SUITE FILE_PATH="coverage/pythonProject$langchain_test.coverage" NAME="langchain_test Coverage Results" MODIFIED="1731294799807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$langchain_test.coverage" NAME="langchain_test Coverage Results" MODIFIED="1731296250812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
   </component>
 </project>

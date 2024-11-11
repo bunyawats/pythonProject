@@ -11,7 +11,8 @@ from langchain.chains import RetrievalQA
 
 
 # Load the PDF
-loader = PDFPlumberLoader("11pests1disease.pdf")
+# loader = PDFPlumberLoader("11pests1disease.pdf")
+loader = PDFPlumberLoader("sandbox/หน้าที่คนประจำเรือ.pdf")
 docs = loader.load()
 
 # Split into chunks
@@ -66,4 +67,5 @@ qa = RetrievalQA(
     return_source_documents=True)
 
 
-print(qa("How does plant respond to disease?")["result"])
+# print(qa("How does plant respond to disease?")["result"])
+print(qa("ความรับผิดชอบของ นายเรือ Captain or Master")["result"])
