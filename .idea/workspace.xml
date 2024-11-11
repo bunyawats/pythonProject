@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0b9a0d0-cb48-4d7c-9908-ebbe6cdcb945" name="Changes" comment="start RAG implementation&#10;&#10;example working now">
-      <change afterPath="$PROJECT_DIR$/sandbox/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/11pests1disease.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/langchain_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/openai_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/rag_langchain.ipynb" afterDir="false" />
+    <list default="true" id="d0b9a0d0-cb48-4d7c-9908-ebbe6cdcb945" name="Changes" comment="Add LANGCHAIN_API_KEY loading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/.env" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/langchain_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/langchain_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/rag_langchain.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_langchain.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.rag_main_a">
+  <component name="RunManager" selected="Python.langchain_test">
     <configuration name="langchain_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -238,10 +237,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.langchain_test" />
         <item itemvalue="Python.rag_main_a" />
         <item itemvalue="Python.rag_main" />
         <item itemvalue="Python.rag_main" />
-        <item itemvalue="Python.langchain_test" />
         <item itemvalue="Python.openai_test" />
       </list>
     </recent_temporary>
@@ -293,24 +292,60 @@
       <option name="project" value="LOCAL" />
       <updated>1730973347424</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add LANGCHAIN_API_KEY loading">
+      <option name="closed" value="true" />
+      <created>1731292219307</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731292219307</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add LANGCHAIN_API_KEY loading">
+      <option name="closed" value="true" />
+      <created>1731292561072</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731292561072</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add LANGCHAIN_API_KEY loading">
+      <option name="closed" value="true" />
+      <created>1731292694572</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731292694572</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add post endpoint&#10;- read header&#10;- read path parameter&#10;- read json body" />
     <MESSAGE value="start RAG implementation&#10;&#10;https://medium.com/@imabhi1216/implementing-rag-using-langchain-and-ollama-93bdf4a9027c" />
     <MESSAGE value="start RAG implementation&#10;&#10;example working now" />
-    <option name="LAST_COMMIT_MESSAGE" value="start RAG implementation&#10;&#10;example working now" />
+    <MESSAGE value="Add LANGCHAIN_API_KEY loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add LANGCHAIN_API_KEY loading" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$rag_main.coverage" NAME="rag_main Coverage Results" MODIFIED="1731291661366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main__1_.coverage" NAME="rag_main (1) Coverage Results" MODIFIED="1731291899695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1730251497849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject$rag_main_a.coverage" NAME="rag_main_a Coverage Results" MODIFIED="1731292013605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$rag_main_a.coverage" NAME="rag_main_a Coverage Results" MODIFIED="1731292070529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$openai_test.coverage" NAME="openai_test Coverage Results" MODIFIED="1731060487269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
-    <SUITE FILE_PATH="coverage/pythonProject$langchain_test.coverage" NAME="langchain_test Coverage Results" MODIFIED="1731291655366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$langchain_test.coverage" NAME="langchain_test Coverage Results" MODIFIED="1731294799807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
   </component>
 </project>
