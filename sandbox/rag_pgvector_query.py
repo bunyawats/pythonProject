@@ -36,7 +36,7 @@ llm = OllamaLLM(model="llama3")
 prompt = """
 1. Use the following pieces of context to answer the question at the end. 
 2. If you don't know the answer, just say that "I don't know" but don't make up an answer on your own.
-3. Try to answer in Thai language.
+3. Please answer the question in Thai language.
 
 Context: {context}
 

@@ -27,7 +27,7 @@ vector_store = PGVector(
 loader = PDFPlumberLoader("หน้าที่คนประจำเรือ.pdf")
 docs = loader.load()
 # Split into chunks
-text_splitter = SemanticChunker(embedder)
+text_splitter = SemanticChunker(embedder, min_chunk_size=3000)
 documents = text_splitter.split_documents(docs)
 
 vector_store.delete_collection()
