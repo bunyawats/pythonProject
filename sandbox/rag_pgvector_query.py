@@ -7,7 +7,6 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from sqlalchemy import URL
 from sqlalchemy import create_engine
 
-
 embedding_model_name = "intfloat/multilingual-e5-large"
 embedder = HuggingFaceEmbeddings(model_name=embedding_model_name)
 collection_name = "my_docs"
@@ -47,18 +46,23 @@ Helpful Answer:"""
 
 QA_CHAIN_PROMPT = PromptTemplate.from_template(prompt)
 
+
 # Post-processing
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
+
 # Chain
 rag_chain = (
-    {"context": retriever | format_docs, "question": RunnablePassthrough()}
-    | QA_CHAIN_PROMPT
-    | llm
-    | StrOutputParser()
+        {"context": retriever | format_docs, "question": RunnablePassthrough()}
+        | QA_CHAIN_PROMPT
+        | llm
+        | StrOutputParser()
 )
 
-# Question
-ans = rag_chain.invoke("ความรับผิดชอบของ นายเรือ Captain or Master ตอบคำถามแยกเป็น ข้อๆ")
-print(ans)
+question = "ความรับผิดชอบของ นายเรือ Captain or Master ตอบคำถามแยกเป็น ข้อๆ"
+
+for x in range(3):
+    print("\n" + str(x) + ")  " + ("%" * 100))
+    ans = rag_chain.invoke(question)
+    print(ans)
