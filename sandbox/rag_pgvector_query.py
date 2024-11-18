@@ -8,6 +8,7 @@ from sqlalchemy import URL
 from sqlalchemy import create_engine
 
 embedding_model_name = "intfloat/multilingual-e5-large"
+# embedding_model_name = "scb10x/typhoon-7b"
 embedder = HuggingFaceEmbeddings(model_name=embedding_model_name)
 collection_name = "my_docs"
 url_object = URL.create(
@@ -26,8 +27,8 @@ vector_store = PGVector(
 )
 
 retriever = vector_store.as_retriever(
-    search_type="mmr",
-    search_kwargs={"k": 2, "fetch_k": 2, "lambda_mult": 0.5},
+    # search_type="mmr",
+    # search_kwargs={"k": 2, "fetch_k": 2, "lambda_mult": 0.5},
 )
 
 # Define llm
@@ -49,7 +50,10 @@ QA_CHAIN_PROMPT = PromptTemplate.from_template(prompt)
 
 # Post-processing
 def format_docs(docs):
-    return "\n\n".join(doc.page_content for doc in docs)
+    context = "\n\n".join(doc.page_content for doc in docs)
+    print(context)
+    print("\n" + ("-" * 100))
+    return context
 
 
 # Chain
@@ -60,7 +64,8 @@ rag_chain = (
         | StrOutputParser()
 )
 
-question = "ความรับผิดชอบของ นายเรือ Captain or Master ตอบคำถามแยกเป็น ข้อๆ"
+# question = "ความรับผิดชอบของ นายเรือ Captain or Master ตอบคำถามแยกเป็น ข้อๆ"
+question = "แสดง สารบัญ ของเอกสารนี้"
 
 for x in range(3):
     print("\n" + str(x) + ")  " + ("%" * 100))

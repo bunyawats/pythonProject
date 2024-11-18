@@ -6,6 +6,7 @@ from sqlalchemy import URL
 from sqlalchemy import create_engine
 
 embedding_model_name = "intfloat/multilingual-e5-large"
+# embedding_model_name = "scb10x/typhoon-7b"
 embedder = HuggingFaceEmbeddings(model_name=embedding_model_name)
 collection_name = "my_docs"
 url_object = URL.create(
@@ -15,6 +16,17 @@ url_object = URL.create(
     host="localhost",
     database="go",
 )
+
+# Load the PDF
+loader = PDFPlumberLoader("หน้าที่คนประจำเรือ.pdf")
+docs = loader.load()
+# Split into chunks
+text_splitter = SemanticChunker(embedder, breakpoint_threshold_type="interquartile")
+documents = text_splitter.split_documents(docs)
+for document in documents:
+    print("\n"+("-"*100))
+    print(document.page_content)
+
 engine = create_engine(url_object)
 vector_store = PGVector(
     embeddings=embedder,
@@ -22,15 +34,6 @@ vector_store = PGVector(
     use_jsonb=True,
     connection=engine,
 )
-
-# Load the PDF
-loader = PDFPlumberLoader("หน้าที่คนประจำเรือ.pdf")
-docs = loader.load()
-# Split into chunks
-text_splitter = SemanticChunker(embedder, min_chunk_size=3000)
-documents = text_splitter.split_documents(docs)
-
 vector_store.delete_collection()
 vector_store.create_collection()
-
 vector_store.add_documents(documents)
