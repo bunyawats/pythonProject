@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="remove .env">
-      <change afterPath="$PROJECT_DIR$/sandbox/langchain_sql_executor.py" afterDir="false" />
+    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="select data from database using llm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/rag_pgvector_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_pgvector_query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/langchain_sql_executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/langchain_sql_executor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731991199150</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="select data from database using llm">
+      <option name="closed" value="true" />
+      <created>1732021623784</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732021623784</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -302,7 +309,8 @@
     <MESSAGE value="remove duplicated code" />
     <MESSAGE value="tracing llm project with langsmith" />
     <MESSAGE value="remove .env" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove .env" />
+    <MESSAGE value="select data from database using llm" />
+    <option name="LAST_COMMIT_MESSAGE" value="select data from database using llm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -321,7 +329,7 @@
     <SUITE FILE_PATH="coverage/pythonProject$rag_main__1_.coverage" NAME="rag_main (1) Coverage Results" MODIFIED="1731291899695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_query_pgvector.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1731992093473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1730251497849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject$langchain_sql_executor.coverage" NAME="langchain_sql_executor Coverage Results" MODIFIED="1732017404983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$langchain_sql_executor.coverage" NAME="langchain_sql_executor Coverage Results" MODIFIED="1732022389225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$pgvector_test.coverage" NAME="pgvector_test Coverage Results" MODIFIED="1731385364163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main_a.coverage" NAME="rag_main_a Coverage Results" MODIFIED="1731387730297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$langchain_test.coverage" NAME="langchain_test Coverage Results" MODIFIED="1731296250812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
