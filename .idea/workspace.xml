@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="cleansing">
+    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="echo context retrieval">
+      <change afterPath="$PROJECT_DIR$/sandbox/rag_pgvector_store.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/.env" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/rag_pgvector_load_pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_pgvector_load_pdf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/rag_pgvector_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_pgvector_query.py" afterDir="false" />
     </list>
@@ -166,8 +166,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.rag_pgvector_load_pdf" />
         <item itemvalue="Python.rag_pgvector_query" />
+        <item itemvalue="Python.rag_pgvector_load_pdf" />
         <item itemvalue="Python.openai_test" />
         <item itemvalue="Python.rag_main_a" />
         <item itemvalue="Python.pgvector_test" />
@@ -239,20 +239,29 @@
       <option name="project" value="LOCAL" />
       <updated>1731463666796</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="echo context retrieval">
+      <option name="closed" value="true" />
+      <created>1731924240310</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731924240310</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="use embedding_model_name = &quot;intfloat/multilingual-e5-large&quot;" />
     <MESSAGE value="use pgvector" />
     <MESSAGE value="cleansing" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleansing" />
+    <MESSAGE value="echo context retrieval" />
+    <option name="LAST_COMMIT_MESSAGE" value="echo context retrieval" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pythonProject$rag_load_pdf_pgvector.coverage" NAME="rag_pgvector_load_pdf Coverage Results" MODIFIED="1731923578939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$rag_load_pdf_pgvector.coverage" NAME="rag_pgvector_load_pdf Coverage Results" MODIFIED="1731983669535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main.coverage" NAME="rag_main Coverage Results" MODIFIED="1731319762635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main__1_.coverage" NAME="rag_main (1) Coverage Results" MODIFIED="1731291899695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
-    <SUITE FILE_PATH="coverage/pythonProject$rag_query_pgvector.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1731923502552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$rag_query_pgvector.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1731983716193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1730251497849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$pgvector_test.coverage" NAME="pgvector_test Coverage Results" MODIFIED="1731385364163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main_a.coverage" NAME="rag_main_a Coverage Results" MODIFIED="1731387730297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />

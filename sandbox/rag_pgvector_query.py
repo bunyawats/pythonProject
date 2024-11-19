@@ -2,29 +2,10 @@ from langchain_ollama import OllamaLLM
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain.prompts import PromptTemplate
-from langchain_postgres.vectorstores import PGVector
-from langchain_huggingface import HuggingFaceEmbeddings
-from sqlalchemy import URL
-from sqlalchemy import create_engine
 
-embedding_model_name = "intfloat/multilingual-e5-large"
-# embedding_model_name = "scb10x/typhoon-7b"
-embedder = HuggingFaceEmbeddings(model_name=embedding_model_name)
-collection_name = "my_docs"
-url_object = URL.create(
-    "postgresql+psycopg",
-    username="gouser",
-    password="A1u$35#24",  # plain (unescaped) text
-    host="localhost",
-    database="go",
-)
-engine = create_engine(url_object)
-vector_store = PGVector(
-    embeddings=embedder,
-    collection_name=collection_name,
-    use_jsonb=True,
-    connection=engine,
-)
+from sandbox.rag_pgvector_store import create_pgvector_store, embedder
+
+vector_store = create_pgvector_store(embedder)
 
 retriever = vector_store.as_retriever(
     # search_type="mmr",
