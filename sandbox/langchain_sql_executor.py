@@ -58,7 +58,7 @@ print(get_schema("_"))
 llm = OllamaLLM(model="llama3")
 
 template = """
-Based on the table schema below, write a SQL query that would answer the user's question. Just answer executable SQL script only:
+Based on the table schema below, write a SQL query that would answer the user's question. Just answer only pain SQL command:
 
 {schema}
 
