@@ -1,9 +1,19 @@
+import os
+
+from dotenv import load_dotenv
 from langchain_ollama import OllamaLLM
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
+from langchain import hub
 from langchain.prompts import PromptTemplate
 
 from sandbox.rag_pgvector_store import create_pgvector_store, embedder
+
+pathDir = os.path.join(os.getcwd(), ".env")
+print(pathDir)
+load_dotenv(pathDir)
+my_variable = os.getenv("LANGCHAIN_API_KEY")
+print(my_variable)
 
 vector_store = create_pgvector_store(embedder)
 
@@ -26,8 +36,8 @@ Question: {question}
 
 Helpful Answer:"""
 
-QA_CHAIN_PROMPT = PromptTemplate.from_template(prompt)
-
+# QA_CHAIN_PROMPT = PromptTemplate.from_template(prompt)
+QA_CHAIN_PROMPT = hub.pull("rlm/rag-prompt")
 
 # Post-processing
 def format_docs(docs):

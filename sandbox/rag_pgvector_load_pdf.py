@@ -1,7 +1,16 @@
+import os
+
+from dotenv import load_dotenv
 from langchain_community.document_loaders import PDFPlumberLoader
 from langchain_experimental.text_splitter import SemanticChunker
 
 from sandbox.rag_pgvector_store import create_pgvector_store, embedder
+
+pathDir = os.path.join(os.getcwd(), ".env")
+print(pathDir)
+load_dotenv(pathDir)
+my_variable = os.getenv("LANGCHAIN_API_KEY")
+print(my_variable)
 
 vector_store = create_pgvector_store(embedder)
 
