@@ -8,12 +8,12 @@ from sandbox.rag_pgvector_query import rag_chain
 
 classification_template = PromptTemplate.from_template(
     """You are good at classifying a question.
-    Given the user question below, classify it as either being about `Database`, `Chat` or 'Offtopic'.
+    Given the user question below, classify it as either being about `Database`, `Chat` or 'Unknown'.
     Please answer only classified words and no surrounding quote
 
     <If the question is about someone attributes classify the question as 'Database'>
     <If the question is about content in the document, classify it as 'Chat'>
-    <If the question is about whether, football or anything else not related to the people or operation on the ship, classify the question as 'offtopic'>
+    <If the question is about anything else not related to the people or operation on the ship, classify the question as 'Unknown'>
 
     <question>
     {question}
@@ -23,6 +23,7 @@ classification_template = PromptTemplate.from_template(
 )
 
 def route(info):
+    print(info)
     if "database" in info["topic"].lower():
         return sql_chain
     elif "chat" in info["topic"].lower():
@@ -39,11 +40,10 @@ full_chain = RunnableParallel(
     }
 ) | RunnableLambda(route)
 
-result = full_chain.invoke({"question": "How old is Bunyawat?"})
-
 print(">" * 150)
+result = full_chain.invoke({"question": "How old is Bunyawat?"})
 print(result)
 print(">" * 150)
-
-# result = full_chain.invoke({"question": "แสดง สารบัญ ของเอกสารนี้?"})
-# print(result)
+result = full_chain.invoke({"question": "แสดง สารบัญ ของเอกสารนี้?"})
+print(result)
+print(">" * 150)

@@ -2,8 +2,9 @@ import os
 from dotenv import load_dotenv
 from langchain_ollama import OllamaLLM
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain import hub
+
 # from langchain.prompts import PromptTemplate
 
 from sandbox.rag_pgvector_store import create_pgvector_store, embedder
@@ -46,9 +47,12 @@ def format_docs(docs):
     # print("\n" + ("-" * 100))
     return context
 
+def dic_to_str(input: dict):
+    return input["question"]
 
 # Chain
 rag_chain = (
+        RunnableLambda(dic_to_str) |
         {"context": retriever | format_docs, "question": RunnablePassthrough()}
         | QA_CHAIN_PROMPT
         | llm
@@ -56,7 +60,8 @@ rag_chain = (
 )
 
 # question = "ความรับผิดชอบของ นายเรือ Captain or Master ตอบคำถามแยกเป็น ข้อๆ"
-question = "แสดงสารบัญของเอกสารนี้"
+# question = "แสดงสารบัญของเอกสารนี้"
+question = {"question": "แสดงสารบัญของเอกสารนี้" }
 
 # ans = rag_chain.invoke(question)
 # print(ans)
@@ -67,4 +72,4 @@ question = "แสดงสารบัญของเอกสารนี้"
 #     print(ans)
 
 
-# question = {"question": "แสดงสารบัญของเอกสารนี้" }
+

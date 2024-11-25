@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="select data from database using llm">
-      <change afterPath="$PROJECT_DIR$/sandbox/rag_routing.py" afterDir="false" />
+    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="rag routing initial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/langchain_sql_executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/langchain_sql_executor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox/rag_pgvector_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_pgvector_query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/rag_routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/rag_routing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <recent name="$PROJECT_DIR$/sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.rag_pgvector_query">
+  <component name="RunManager" selected="Python.rag_routing">
     <configuration name="langchain_sql_executor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -199,9 +198,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.rag_routing" />
         <item itemvalue="Python.rag_pgvector_query" />
         <item itemvalue="Python.langchain_sql_executor" />
-        <item itemvalue="Python.rag_routing" />
         <item itemvalue="Python.rag_pgvector_load_pdf" />
         <item itemvalue="Python.openai_test" />
       </list>
@@ -344,9 +343,33 @@
       <option name="presentableId" value="Default" />
       <updated>1732088556443</updated>
       <workItem from="1732088558202" duration="7298000" />
-      <workItem from="1732531349816" duration="7057000" />
+      <workItem from="1732531349816" duration="12211000" />
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="rag routing initial">
+      <option name="closed" value="true" />
+      <created>1732540370579</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732540370579</updated>
+    </task>
+    <task id="LOCAL-00017" summary="rag routing initial">
+      <option name="closed" value="true" />
+      <created>1732540670587</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732540670588</updated>
+    </task>
+    <task id="LOCAL-00018" summary="rag routing initial">
+      <option name="closed" value="true" />
+      <created>1732540903838</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732540903838</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,20 +398,21 @@
     <MESSAGE value="tracing llm project with langsmith" />
     <MESSAGE value="remove .env" />
     <MESSAGE value="select data from database using llm" />
-    <option name="LAST_COMMIT_MESSAGE" value="select data from database using llm" />
+    <MESSAGE value="rag routing initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="rag routing initial" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$rag_load_pdf_pgvector.coverage" NAME="rag_pgvector_load_pdf Coverage Results" MODIFIED="1731990244771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
-    <SUITE FILE_PATH="coverage/pythonProject$rag_pgvector_query.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1732537854749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$rag_pgvector_query.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1732542512188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main.coverage" NAME="rag_main Coverage Results" MODIFIED="1731319762635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main__1_.coverage" NAME="rag_main (1) Coverage Results" MODIFIED="1731291899695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_query_pgvector.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1731992093473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
-    <SUITE FILE_PATH="coverage/pythonProject$langchain_sql_executor.coverage" NAME="langchain_sql_executor Coverage Results" MODIFIED="1732537621815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$langchain_sql_executor.coverage" NAME="langchain_sql_executor Coverage Results" MODIFIED="1732539196266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main_a.coverage" NAME="rag_main_a Coverage Results" MODIFIED="1731387730297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$pgvector_test.coverage" NAME="pgvector_test Coverage Results" MODIFIED="1731385364163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$openai_test.coverage" NAME="openai_test Coverage Results" MODIFIED="1731462926236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1730251497849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject$rag_routing.coverage" NAME="rag_routing Coverage Results" MODIFIED="1732537100272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$rag_routing.coverage" NAME="rag_routing Coverage Results" MODIFIED="1732543533047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$langchain_test.coverage" NAME="langchain_test Coverage Results" MODIFIED="1731296250812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
   </component>
 </project>
