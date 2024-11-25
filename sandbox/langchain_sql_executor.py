@@ -13,8 +13,8 @@ from langchain_core.runnables import RunnableLambda
 pathDir = os.path.join(os.getcwd(), ".env")
 print(pathDir)
 load_dotenv(pathDir)
-my_variable = os.getenv("LANGCHAIN_API_KEY")
-print(my_variable)
+# my_variable = os.getenv("LANGCHAIN_API_KEY")
+# print(my_variable)
 
 
 url_object = URL.create(
@@ -52,45 +52,50 @@ def get_schema(_):
 def run_query(query):
     return db.run(query)
 
-print(get_schema("_"))
+# print(get_schema("_"))
 
 
 llm = OllamaLLM(model="llama3")
 
-template = """
-Based on the table schema below, write a SQL query that would answer the user's question. Just answer only pain SQL command:
+sql_generate_template = """
+Based on the table schema below, write a SQL query that would answer the user's question. 
+Just answer only pain SQL command and no surrounding quote
 
 {schema}
 
 Question: {question}
 SQL Query:"""
-sql_prompt = ChatPromptTemplate.from_template(template)
 
-sql_response = (
+sql_prompt = ChatPromptTemplate.from_template(sql_generate_template)
+
+query_chain = (
         RunnablePassthrough.assign(schema=get_schema)
         | sql_prompt
         | llm.bind(stop=["\nSQLResult:"])
         | StrOutputParser()
 )
 
-template = """Based on the table schema below, question, sql query, and sql response, write a natural language response:
+natural_language_template = """
+Based on the table schema below, question, sql query, and sql response, write a natural language response:
+
 {schema}
 
 Question: {question}
 SQL Query: {query}
 SQL Response: {response}"""
-prompt_response = ChatPromptTemplate.from_template(template)
+
+prompt_response = ChatPromptTemplate.from_template(natural_language_template)
 
 
 def debug(input):
-    print(">" * 150)
-    print("SQL Output: ", input["query"])
-    print(">" * 150)
+    # print(">" * 150)
+    # print("SQL Output: ", input["query"])
+    # print(">" * 150)
 
     return input
 
 sql_chain = (
-    RunnablePassthrough.assign(query=sql_response).assign(
+    RunnablePassthrough.assign(query=query_chain).assign(
         schema=get_schema,
         response=lambda x: run_query(x["query"]),
     )
