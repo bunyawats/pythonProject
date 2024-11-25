@@ -35,7 +35,7 @@ classification_chain = classification_template | OllamaLLM(model="llama3") | Str
 
 def route(info):
 
-    print(info)
+    # print(info)
 
     if "database" in info["topic"].lower():
         return sql_chain
@@ -52,7 +52,10 @@ full_chain = RunnableParallel(
 ) | RunnableLambda(route)
 
 result = full_chain.invoke({"question": "How old is Bunyawat?"})
+
+print(">" * 150)
 print(result)
+print(">" * 150)
 
 # result = full_chain.invoke({"question": "แสดง สารบัญ ของเอกสารนี้?"})
 # print(result)

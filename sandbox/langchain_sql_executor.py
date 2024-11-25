@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from langchain_core.runnables import RunnableLambda
 
 pathDir = os.path.join(os.getcwd(), ".env")
-print(pathDir)
+# print(pathDir)
 load_dotenv(pathDir)
 # my_variable = os.getenv("LANGCHAIN_API_KEY")
 # print(my_variable)
@@ -105,5 +105,5 @@ sql_chain = (
     | StrOutputParser()
 )
 
-answer = sql_chain.invoke({"question": "Who is the oldest?"})
-print(answer)
+# answer = sql_chain.invoke({"question": "Who is the oldest?"})
+# print(answer)

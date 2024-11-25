@@ -9,7 +9,7 @@ from langchain import hub
 from sandbox.rag_pgvector_store import create_pgvector_store, embedder
 
 pathDir = os.path.join(os.getcwd(), ".env")
-print(pathDir)
+# print(pathDir)
 load_dotenv(pathDir)
 # my_variable = os.getenv("LANGCHAIN_API_KEY")
 # print(my_variable)
