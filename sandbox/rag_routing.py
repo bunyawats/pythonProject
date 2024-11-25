@@ -22,27 +22,15 @@ classification_template = PromptTemplate.from_template(
     Classification:"""
 )
 
-classification_chain = classification_template | OllamaLLM(model="llama3") | StrOutputParser()
-
-
-# result = classification_chain.invoke({"question": "How old is Bunyawat?"})
-# print(result)
-#
-#
-# result = classification_chain.invoke({"question":"แสดง สารบัญ ของเอกสารนี้?"})
-# print(result)
-
-
 def route(info):
-
-    # print(info)
-
     if "database" in info["topic"].lower():
         return sql_chain
     elif "chat" in info["topic"].lower():
         return rag_chain
     else:
         return "I am sorry, I am not allowed to answer about this topic."
+
+classification_chain = classification_template | OllamaLLM(model="llama3") | StrOutputParser()
 
 full_chain = RunnableParallel(
     {
