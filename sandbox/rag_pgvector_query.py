@@ -60,8 +60,8 @@ rag_chain = (
 # question = "แสดงสารบัญของเอกสารนี้"
 question = {"question": "แสดงสารบัญของเอกสารนี้" }
 
-ans = rag_chain.invoke(question)
-print(ans)
+# ans = rag_chain.invoke(question)
+# print(ans)
 
 # for x in range(1):
 #     print("\n" + str(x) + ")  " + ("%" * 100))
