@@ -47,12 +47,9 @@ def format_docs(docs):
     # print("\n" + ("-" * 100))
     return context
 
-def dic_to_str(input: dict):
-    return input["question"]
-
 # Chain
 rag_chain = (
-        RunnableLambda(dic_to_str) |
+        RunnableLambda(lambda x : x["question"]) |
         {"context": retriever | format_docs, "question": RunnablePassthrough()}
         | QA_CHAIN_PROMPT
         | llm
@@ -63,8 +60,8 @@ rag_chain = (
 # question = "แสดงสารบัญของเอกสารนี้"
 question = {"question": "แสดงสารบัญของเอกสารนี้" }
 
-# ans = rag_chain.invoke(question)
-# print(ans)
+ans = rag_chain.invoke(question)
+print(ans)
 
 # for x in range(1):
 #     print("\n" + str(x) + ")  " + ("%" * 100))
