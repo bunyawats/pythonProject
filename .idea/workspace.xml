@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="trun question = {&quot;question&quot;: &quot;แสดงสารบัญของเอกสารนี้&quot; } to &quot;แสดงสารบัญของเอกสารนี้&quot;">
-      <change afterPath="$PROJECT_DIR$/sandbox/tool_call_test.py" afterDir="false" />
+    <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="call external functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/tool_call_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/tool_call_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +343,7 @@
       <updated>1732088556443</updated>
       <workItem from="1732088558202" duration="7298000" />
       <workItem from="1732531349816" duration="35917000" />
-      <workItem from="1732936498629" duration="6452000" />
+      <workItem from="1732936498629" duration="11681000" />
     </task>
     <task id="LOCAL-00016" summary="rag routing initial">
       <option name="closed" value="true" />
@@ -393,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732703485250</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="call external functions">
+      <option name="closed" value="true" />
+      <created>1732959166593</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732959166593</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,14 +432,15 @@
     <MESSAGE value="select data from database using llm" />
     <MESSAGE value="rag routing initial" />
     <MESSAGE value="trun question = {&quot;question&quot;: &quot;แสดงสารบัญของเอกสารนี้&quot; } to &quot;แสดงสารบัญของเอกสารนี้&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="trun question = {&quot;question&quot;: &quot;แสดงสารบัญของเอกสารนี้&quot; } to &quot;แสดงสารบัญของเอกสารนี้&quot;" />
+    <MESSAGE value="call external functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="call external functions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$rag_load_pdf_pgvector.coverage" NAME="rag_pgvector_load_pdf Coverage Results" MODIFIED="1731990244771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_pgvector_query.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1732781302089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main.coverage" NAME="rag_main Coverage Results" MODIFIED="1731319762635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_main__1_.coverage" NAME="rag_main (1) Coverage Results" MODIFIED="1731291899695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
-    <SUITE FILE_PATH="coverage/pythonProject$tool_call_test.coverage" NAME="tool_call_test Coverage Results" MODIFIED="1732956025596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
+    <SUITE FILE_PATH="coverage/pythonProject$tool_call_test.coverage" NAME="tool_call_test Coverage Results" MODIFIED="1732968772351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$rag_query_pgvector.coverage" NAME="rag_pgvector_query Coverage Results" MODIFIED="1731992093473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$langchain_sql_executor.coverage" NAME="langchain_sql_executor Coverage Results" MODIFIED="1732539196266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
     <SUITE FILE_PATH="coverage/pythonProject$pgvector_test.coverage" NAME="pgvector_test Coverage Results" MODIFIED="1731385364163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sandbox" />
