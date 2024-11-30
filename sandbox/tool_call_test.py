@@ -51,12 +51,12 @@ llm_with_tools = llm.bind_tools(tools)
 
 query = "What is 3 * 12? Also, what is 11 + 49?"
 messages = [HumanMessage(query)]
-ai_msg = llm_with_tools.invoke(messages)
+# ai_msg = llm_with_tools.invoke(messages)
 
 # messages = composToolCallOutput(ai_msg)
 
-chain = RunnableLambda(composToolCallOutput) | llm_with_tools | StrOutputParser()
-print( chain.invoke(ai_msg))
+chain = llm_with_tools | RunnableLambda(composToolCallOutput) | llm_with_tools | StrOutputParser()
+print( chain.invoke(messages))
 
 # print( StrOutputParser().invoke( llm_with_tools.invoke(messages) ))
 
