@@ -20,7 +20,7 @@ async def boss_detail(
 
         # Extract token (assuming Bearer schema)
     user_token = authorization[len("Bearer "):]
-    print(user_token)
+    # print(user_token)
 
     query = "What is 3 * 12? Also, what is 11 + 49?"
     json_string =  call_boss_detail(query, company_id, user_token)

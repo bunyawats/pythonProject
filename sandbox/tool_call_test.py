@@ -15,7 +15,7 @@ llm = ChatOllama(model="llama3.1", temperature=0, )
 
 def compose_tool_call_output(input: dict):
     print(input["ai_msg"].tool_calls)
-    print(">>" * 100)
+    print(">>" * 50)
     input["messages"].append(input["ai_msg"])
     for tool_call in input["ai_msg"].tool_calls:
         selected_tool = {"add": add, "multiply": multiply}[tool_call["name"].lower()]
@@ -44,5 +44,5 @@ chain = (RunnableLambda(lambda x: [HumanMessage(x)])
          | llm_with_tools
          | StrOutputParser())
 
-query = "What is 3 * 12? Also, what is 11 + 49?"
-print(chain.invoke(query))
+# query = "What is 3 * 12? Also, what is 11 + 49?"
+# print(chain.invoke(query))
