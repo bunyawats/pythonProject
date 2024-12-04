@@ -6,6 +6,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_core.tools import tool
 from langchain_ollama import ChatOllama
+from sympy.polys.polyconfig import query
 
 pathDir = os.path.join(os.getcwd(), ".env")
 # print(pathDir)
@@ -18,7 +19,13 @@ def compose_tool_call_output(input: dict):
     print(">>" * 50)
     input["messages"].append(input["ai_msg"])
     for tool_call in input["ai_msg"].tool_calls:
-        selected_tool = {"add": add, "multiply": multiply}[tool_call["name"].lower()]
+
+        selected_tool = {
+            "add": add,
+            "multiply": multiply,
+            "get_boss_detail": get_boss_detail
+        }[tool_call["name"].lower()]
+
         tool_msg = selected_tool.invoke(tool_call)
         input["messages"].append(tool_msg)
 
@@ -35,7 +42,20 @@ def multiply(a: int, b: int) -> int:
 
     return a * b
 
-tools = [add, multiply]
+@tool
+def get_boss_detail() -> str:
+    """
+    Useful for get boss detail.
+    Boss 's thai name = fname + lname
+    Boss 's english name = efname + elname
+    Boss 's photo = picture
+
+    :return: Boss Name
+    """
+
+    return "Bunyawat Singchai"
+
+tools = [add, multiply, get_boss_detail]
 llm_with_tools = llm.bind_tools(tools)
 
 chain = (RunnableLambda(lambda x: [HumanMessage(x)])
@@ -45,4 +65,5 @@ chain = (RunnableLambda(lambda x: [HumanMessage(x)])
          | StrOutputParser())
 
 # query = "What is 3 * 12? Also, what is 11 + 49?"
-# print(chain.invoke(query))
+chat_query = "WHo is my boss"
+print(chain.invoke(chat_query))
