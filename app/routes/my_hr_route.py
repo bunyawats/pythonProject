@@ -2,6 +2,7 @@ import json
 
 from fastapi import APIRouter, Path, Body, Header, HTTPException
 from sandbox.call_rest_service import call_boss_detail
+from sandbox.tool_call_test import query_llm
 
 router = APIRouter()
 
@@ -22,7 +23,23 @@ async def boss_detail(
     user_token = authorization[len("Bearer "):]
     # print(user_token)
 
-    query = "What is 3 * 12? Also, what is 11 + 49?"
-    json_string =  call_boss_detail(query, company_id, user_token)
+    json_string =  call_boss_detail(company_id, user_token)
     return json.loads(json_string)
+
+@router.get("/chat_query/{company_id}")
+async def chat_query(
+        company_id: str = Path(..., title="The ID of the item to create"),
+        authorization: str = Header(...),
+):
+        # Ensure the Authorization header is present
+    if not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Invalid Authorization header")
+
+        # Extract token (assuming Bearer schema)
+    user_token = authorization[len("Bearer "):]
+    # print(user_token)
+
+    query = "Who is my boss?"
+    answer =  query_llm(query, company_id, user_token)
+    return answer
 

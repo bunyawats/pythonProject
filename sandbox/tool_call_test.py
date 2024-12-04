@@ -12,8 +12,6 @@ pathDir = os.path.join(os.getcwd(), ".env")
 # print(pathDir)
 load_dotenv(pathDir)
 
-llm = ChatOllama(model="llama3.1", temperature=0, )
-
 def compose_tool_call_output(input: dict):
     print(input["ai_msg"].tool_calls)
     print(">>" * 50)
@@ -55,15 +53,21 @@ def get_boss_detail() -> str:
 
     return "Bunyawat Singchai"
 
-tools = [add, multiply, get_boss_detail]
-llm_with_tools = llm.bind_tools(tools)
 
-chain = (RunnableLambda(lambda x: [HumanMessage(x)])
-         | {"ai_msg": RunnablePassthrough() | llm_with_tools, "messages": RunnablePassthrough()}
-         | RunnableLambda(compose_tool_call_output)
-         | llm_with_tools
-         | StrOutputParser())
+def query_llm(chat_query : str, company_id : str, user_token: str) -> str:
+
+    llm = ChatOllama(model="llama3.1", temperature=0, )
+
+    tools = [add, multiply, get_boss_detail]
+    llm_with_tools = llm.bind_tools(tools)
+
+    chain = (RunnableLambda(lambda x: [HumanMessage(x)])
+             | {"ai_msg": RunnablePassthrough() | llm_with_tools, "messages": RunnablePassthrough()}
+             | RunnableLambda(compose_tool_call_output)
+             | llm_with_tools
+             | StrOutputParser())
+    return chain.invoke(chat_query)
 
 # query = "What is 3 * 12? Also, what is 11 + 49?"
-chat_query = "WHo is my boss"
-print(chain.invoke(chat_query))
+# chat_query = "WHo is my boss"
+# print(chain.invoke(chat_query))

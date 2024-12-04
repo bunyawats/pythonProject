@@ -1,10 +1,8 @@
 from string import Template
 import requests
 
-from sandbox.tool_call_test import chain
 
-
-def call_boss_detail(query : str, company_id : str, user_token) -> str:
+def call_boss_detail(company_id : str, user_token) -> str:
     """
     Call boss detail
     """
@@ -27,8 +25,6 @@ def call_boss_detail(query : str, company_id : str, user_token) -> str:
     # Print the response
     print(f"Status Code: {response.status_code}")
     print("Response Body:", response.text)
-
-    print(chain.invoke(query))
 
     return response.text
 
