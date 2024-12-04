@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d98b9fbe-5b4a-45b2-9356-33b9aabe4f97" name="Changes" comment="call myhr service api">
-      <change afterPath="$PROJECT_DIR$/app/routes/my_hr_route.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/item_route.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/item_route.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/my_hr_route.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/my_hr_route.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/call_rest_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/call_rest_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/tool_call_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/tool_call_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,31 +47,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.call_rest_service.executor": "Run",
-    "Python.langchain_sql_executor.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.openai_test.executor": "Run",
-    "Python.pgvector_test.executor": "Run",
-    "Python.rag_load_pdf_pgvector.executor": "Run",
-    "Python.rag_main.executor": "Run",
-    "Python.rag_main_a.executor": "Run",
-    "Python.rag_pgvector_load_pdf.executor": "Run",
-    "Python.rag_pgvector_query.executor": "Run",
-    "Python.rag_query_pgvector.executor": "Run",
-    "Python.rag_routing.executor": "Run",
-    "Python.tool_call_test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/bunyawatsingchai/PycharmProjects/pythonProject/sandbox",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.call_rest_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.langchain_sql_executor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.openai_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pgvector_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_load_pdf_pgvector.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_main_a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_pgvector_load_pdf.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_pgvector_query.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_query_pgvector.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_routing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tool_call_test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bunyawatsingchai/PycharmProjects/pythonProject/sandbox&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sandbox" />

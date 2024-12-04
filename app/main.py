@@ -4,6 +4,7 @@ from app.routes import example_route, my_hr_route, item_route
 
 app = FastAPI()
 
+
 # Register routes
 app.include_router(example_route.router)
 app.include_router(item_route.router)

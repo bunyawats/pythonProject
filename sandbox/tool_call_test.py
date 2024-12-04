@@ -7,8 +7,6 @@ from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_core.tools import tool
 from langchain_ollama import ChatOllama
 
-from sandbox.call_rest_service import call_boss_detail, company_id, user_token
-
 pathDir = os.path.join(os.getcwd(), ".env")
 # print(pathDir)
 load_dotenv(pathDir)
@@ -35,7 +33,6 @@ def add(a: int, b: int) -> int:
 def multiply(a: int, b: int) -> int:
     """Multiplies a and b."""
 
-    call_boss_detail(company_id=company_id, user_token=user_token)
     return a * b
 
 tools = [add, multiply]
