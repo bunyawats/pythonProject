@@ -6,6 +6,8 @@ def call_boss_detail(company_id : str, user_token) -> str:
     """
     Call boss detail
     """
+    # print("\ncompany_id "+company_id)
+    # print("\nuser_token "+user_token)
 
     # Define the URL
     url = "https://portal.myhr.co.th/chatapi/center/$company_id?api=%2Fplus%2Femployee%2Fboss-detail"

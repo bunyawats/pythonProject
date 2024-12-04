@@ -17,7 +17,7 @@ async def boss_detail(
     if not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Invalid Authorization header")
 
-        # Extract token (assuming Bearer schema)
+    # Extract token (assuming Bearer schema)
     user_token = authorization[len("Bearer "):]
     # print(user_token)
 
@@ -34,10 +34,8 @@ async def chat_query(
     if not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Invalid Authorization header")
 
-        # Extract token (assuming Bearer schema)
     user_token = authorization[len("Bearer "):]
-    # print(user_token)
 
-    answer =  query_llm(query.message, company_id, user_token)
+    answer =  query_llm(query.message, company_id, authorization)
     return answer
 
