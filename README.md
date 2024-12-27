@@ -28,6 +28,10 @@ huggingface-cli --help
 Your token has been saved to /Users/bunyawatsingchai/.cache/huggingface/token
 
 
+pip install sqlalchemy.  
+
+
+
 pip install --upgrade pip
 
 
